@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой крутой сайт</title>
+    <title>Meine erste Webseite</title>
     <style>
         * {
             margin: 0;
@@ -13,16 +13,17 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
             padding: 20px;
         }
 
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: #fff;
             padding: 20px;
             text-align: center;
+            border-radius: 8px;
         }
 
         header nav ul {
@@ -38,85 +39,93 @@
         header nav ul li a {
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
         }
 
         section {
-            margin: 20px 0;
+            margin: 30px 0;
+        }
+
+        section h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
         }
 
         footer {
             text-align: center;
             margin-top: 40px;
             padding: 10px;
-            background-color: #333;
+            background-color: #4CAF50;
             color: #fff;
+            border-radius: 8px;
         }
 
-        /* Добавляем анимацию для плавного перехода */
+        /* Плавная прокрутка */
         html {
             scroll-behavior: smooth;
-        }
-
-        /* Стили для разделов */
-        h2 {
-            color: #333;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Добро пожаловать на мой крутой сайт!</h1>
+        <h1>Willkommen auf meiner ersten Webseite!</h1>
         <nav>
             <ul>
-                <li><a href="#about">О сайте</a></li>
-                <li><a href="#projects">Проекты</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="about">
-        <h2>О сайте</h2>
-        <p>Это мой первый сайт на GitHub. Он включает в себя простую структуру с привлекательным дизайном и функциональностью.</p>
+        <h2>Über mich</h2>
+        <p>Dies ist meine erste Webseite, die ich auf GitHub erstellt habe. Es ist eine einfache Seite, die mir hilft, das Webentwicklung zu lernen und zu üben.</p>
+        <p>Ich bin begeistert von Webentwicklung und möchte meine Fähigkeiten weiter ausbauen. Ich hoffe, diese Seite ist ein guter Anfang!</p>
     </section>
 
     <section id="projects">
-        <h2>Мои проекты</h2>
+        <h2>Meine Projekte</h2>
+        <p>Hier sind einige meiner bisherigen Projekte:</p>
         <ul>
-            <li><a href="https://example.com/project1" target="_blank">Проект 1</a></li>
-            <li><a href="https://example.com/project2" target="_blank">Проект 2</a></li>
-            <li><a href="https://example.com/project3" target="_blank">Проект 3</a></li>
+            <li><a href="https://example.com/project1" target="_blank">Projekt 1</a></li>
+            <li><a href="https://example.com/project2" target="_blank">Projekt 2</a></li>
+            <li><a href="https://example.com/project3" target="_blank">Projekt 3</a></li>
         </ul>
     </section>
 
     <section id="contact">
-        <h2>Контакты</h2>
-        <p>Вы можете связаться со мной через email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <h2>Kontakt</h2>
+        <p>Du kannst mich per E-Mail erreichen: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
     </section>
 
     <footer>
-        <p>© 2024 Все права защищены.</p>
+        <p>© 2024 Alle Rechte vorbehalten.</p>
     </footer>
 
     <script>
-        // Плавная прокрутка при клике на ссылки
+        // Pлавная прокрутка при клике на ссылки
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
     </script>
+
 </body>
 </html>
+
