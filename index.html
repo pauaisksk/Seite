@@ -12,23 +12,32 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
             color: #333;
-            padding: 20px;
+            padding: 0;
+            margin: 0;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
             color: #fff;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
-            border-radius: 8px;
+            border-bottom: 5px solid #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
         }
 
         header nav ul {
             list-style: none;
             padding: 0;
+            margin-top: 20px;
         }
 
         header nav ul li {
@@ -39,7 +48,8 @@
         header nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 1.1rem;
         }
 
         header nav ul li a:hover {
@@ -47,31 +57,81 @@
         }
 
         section {
-            margin: 30px 0;
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1000px;
         }
 
         section h2 {
+            font-size: 2rem;
             color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         section p {
-            font-size: 1.1em;
-            line-height: 1.6;
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        ul li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
         }
 
         footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 10px;
-            background-color: #4CAF50;
+            background-color: #333;
             color: #fff;
-            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 1rem;
         }
 
         /* Плавная прокрутка */
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Эффект для ссылок */
+        a {
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff4081;
+        }
+
+        /* Анимация для секций */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -81,40 +141,40 @@
         <h1>Willkommen auf meiner ersten Webseite!</h1>
         <nav>
             <ul>
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#projects">Projekte</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about" class="fade-in">Über mich</a></li>
+                <li><a href="#projects" class="fade-in">Projekte</a></li>
+                <li><a href="#contact" class="fade-in">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>Über mich</h2>
-        <p>Dies ist meine erste Webseite, die ich auf GitHub erstellt habe. Es ist eine einfache Seite, die mir hilft, das Webentwicklung zu lernen und zu üben.</p>
-        <p>Ich bin begeistert von Webentwicklung und möchte meine Fähigkeiten weiter ausbauen. Ich hoffe, diese Seite ist ein guter Anfang!</p>
+        <p>Willkommen auf meiner ersten Webseite! Ich habe diese Seite erstellt, um meine Fähigkeiten im Bereich Webentwicklung zu verbessern. Auf dieser Seite stelle ich mich vor und zeige einige meiner bisherigen Projekte.</p>
+        <p>Ich bin begeistert, meine Reise in die Webentwicklung zu beginnen, und hoffe, dass diese Seite euch einen kleinen Einblick in meine Arbeit gibt.</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Meine Projekte</h2>
-        <p>Hier sind einige meiner bisherigen Projekte:</p>
+        <p>Hier sind einige meiner bisherigen Projekte, an denen ich gearbeitet habe:</p>
         <ul>
-            <li><a href="https://example.com/project1" target="_blank">Projekt 1</a></li>
-            <li><a href="https://example.com/project2" target="_blank">Projekt 2</a></li>
-            <li><a href="https://example.com/project3" target="_blank">Projekt 3</a></li>
+            <li><a href="https://example.com/project1" target="_blank">Projekt 1: Meine erste Webanwendung</a></li>
+            <li><a href="https://example.com/project2" target="_blank">Projekt 2: Ein interaktives Portfolio</a></li>
+            <li><a href="https://example.com/project3" target="_blank">Projekt 3: Ein Blogging-Tool</a></li>
         </ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Kontakt</h2>
         <p>Du kannst mich per E-Mail erreichen: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
     </section>
 
     <footer>
-        <p>© 2024 Alle Rechte vorbehalten.</p>
+        <p>© 2024 Alle Rechte vorbehalten. | Erstellt von [Dein Name]</p>
     </footer>
 
     <script>
-        // Pлавная прокрутка при клике на ссылки
+        // Плавная прокрутка для навигации
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
